@@ -1,0 +1,8 @@
+{
+    "require": {
+        "ourcodeworld/php-pngquant": "^1.0",
+        "matthiasmullie/minify": "^1.3",
+        "nodejs-php-fallback/uglify": "^1.0",
+        "patchwork/jsqueeze": "^2.0"
+    }
+}
