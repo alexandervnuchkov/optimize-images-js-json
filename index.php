@@ -64,7 +64,7 @@
         if(!$exit_code){
             $in_file_size = round(filesize($file_path) / 1024, 2);
             $out_file_size = round(filesize(str_replace('src', 'out', $file_path)) / 1024, 2);
-            $percent = 1 - round($out_file_size/$in_file_size, 2);
+            $percent = (1 - round($out_file_size/$in_file_size, 2))*100;
             $reduction = $out_file_size - $in_file_size;
             $number = $i+1;
             echo '<tr><td>' . $number . '</td><td>' . basename($file_path) . '</td><td>' . number_format($in_file_size, 2, '.', '\'') . '</td><td>' . number_format($out_file_size, 2, '.', '\'') . '</td><td>' . number_format($reduction, 2, '.', '\'') . '</td><td>' . number_format($percent, 2, '.', '\'') . '</td></tr>';

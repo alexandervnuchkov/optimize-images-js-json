@@ -57,7 +57,7 @@
         
         $in_file_size = round(filesize($file_path) / 1024, 2);
         $out_file_size = round(filesize(str_replace('src', 'out', $file_path)) / 1024, 2);
-        $percent = 1 - round($out_file_size/$in_file_size, 2);
+        $percent = (1 - round($out_file_size/$in_file_size, 2))*100;
         $reduction = $out_file_size - $in_file_size;
         $number = $i+1;
         echo '<tr><td>' . $number . '</td><td>' . basename($file_path) . '</td><td>' . number_format($in_file_size, 2, '.', '\'') . '</td><td>' . number_format($out_file_size, 2, '.', '\'') . '</td><td>' . number_format($reduction, 2, '.', '\'') . '</td><td>' . number_format($percent, 2, '.', '\'') . '</td></tr>';
@@ -85,11 +85,13 @@
         'files/js/out/help/sitemap.sort.js',
         'files/js/out/jquery/jquery.blockUI.js',
         'files/js/out/jquery/jquery.tmpl.js',
+        'files/js/out/core/menu.js',
         'files/js/out/core/language-selector.js',
         'files/js/out/jquery/jquery.watermarkinput.js',
         'files/js/out/core/basemaster.init.js',
+        'files/js/out/core/navigation-menu.js',
         'files/js/out/core/modalscontroller.js',
-        'files/js/out/help/dropit.js',
+        'files/js/out/core/jquery.dropdownToggle.js',
         'files/js/out/jquery/pushy.min.js',
         'files/js/out/help/search.enter.js',
         'files/js/out/builder/prettify/pre.prettyprint.js',
@@ -98,6 +100,7 @@
         'files/js/out/help/editor.tables.js',
         'files/js/out/help/language_table.js',
         'files/js/out/help/table.sorter.js',
+        'files/js/out/help/language_table_builder.js',
         'files/js/out/help/outofdate.notice.js',
         'files/js/out/help/expand.menu.js',
         'files/js/out/help/holiday_greetings.js',
